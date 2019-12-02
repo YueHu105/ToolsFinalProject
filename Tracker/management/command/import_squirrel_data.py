@@ -1,6 +1,6 @@
 from django.core.management.base import BaseCommand
 import pandas as pd
-from squirrel.models import Squirrels
+from Tracker.models import Squirrels
 
 class Command(BaseCommand):
     help = 'help string'
