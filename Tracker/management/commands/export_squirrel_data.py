@@ -10,5 +10,5 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         with sql3.connect( './db.sqlite3') as con:
-            dfe = pd.read_sql_query('select * from Tracker_squirrels', con=con)
+            dfe = pd.read_sql_query('select * from tracker_squirrels', con=con)
             dfe.to_csv(options['file_path'])
