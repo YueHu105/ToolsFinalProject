@@ -11,33 +11,33 @@ The data is from 2018 Central Park Squirrel Census. It contains 3,023 sighting r
 How to use Tracker?
 -
 There are six views in the application. 
-###View of a map which displays the location of the squirrel sightings
-Located at: /map
+### View of a map which displays the location of the squirrel sightings<br>  
+Located at: /map<br>  
 Method: GET
 
-###View of a list of all squirrel sightings
-Located at: /sightings
+### View of a list of all squirrel sightings<br>  
+Located at: /sightings<br>  
 Method: GET
 
-###View to update a particular sighting
-Located at: /sightings/<unique-squirrel-id>
+### View to update a particular sighting<br>  
+Located at: /sightings/<unique-squirrel-id><br>  
 Method: POST
 	
-###View to create a new sighting
-Located at: /sightings/add
+### View to create a new sighting<br>  
+Located at: /sightings/add<br>  
 Method: POST
 
-###View to delete a sighting
-Located at: /sightings/<unique-squirrel-id>
+### View to delete a sighting<br>  
+Located at: /sightings/<unique-squirrel-id><br>  
 Method: DELETE
 
-###View of general stats about the sightings
-Located at: /sightings/stats
+### View of general stats about the sightings<br>  
+Located at: /sightings/stats<br>  
 Method: GET
 
 Group name and section
 -
-Project Group 12, Section 2
-UNIs: [ps3120, yh3218] 
+Project Group 12, Section 2<br>  
+UNIs: [ps3120, yh3218] <br>  
 Name: Pei Yin Jodie Shue, Yue Hu
 
