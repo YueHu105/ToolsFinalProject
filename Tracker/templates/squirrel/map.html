@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Leaflet Web Map</title>
+
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+
+<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+
+<style>
+#map {
+    width: 960px;
+    height:500px;
+}
+</style>
+
+</head>
+
+<body>
+
+    <div id="map"></div>
+
+<script>
+    var map = L.map('map',{
+    center: [ 40.7766043512974, -73.9676410497481],
+    zoom: 15
+    });
+    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+	var sqList = {{squirrel_list | safe}};
+    for( i=0; i<sqList.length; i++){
+    	var m = L.marker([sqList[i].X, sqList[i].Y]).addTo(map);
+    	m.bindPopup(sqList[i].ID);
+    }
+</script>
+var
+</body>
+
+</html>
