@@ -15,21 +15,25 @@ def leafletmap(request):
 
 class SquirrelList(ListView):
     model = Squirrels
+    template_name = 'Tracker/squirrels_list.html'
 
 class SquirrelUpdate(UpdateView):
     model = Squirrels
     fields = ["Latitude", "Longitude", "Primary_Fur_Color"]
     success_url = reverse_lazy('squirrel_list')
+    template_name = 'Tracker/squirrels_form.html'
 
 
 class SquirrelDelete(DeleteView):
     model = Squirrels
     success_url = reverse_lazy('squirrel_list')
+    template_name = 'Tracker/squirrels_comfirm_delete.html'
 
 class SquirrelAdd(CreateView):
     model = Squirrels
     fields = ["Latitude", "Longitude", "Unique_Squirrel_ID", "Shift", "Date", "Age", "Primary_Fur_Color", "Location", "Specific_Location", "Running", "Chasing", "Climbing", "Eating", "Foraging", "Other_Activities", "Kuks", "Quaas", "Moans", "Tail_flags", "Tail_twitches", "Approaches", "Indifferent", "Runs_from"]
     success_url = reverse_lazy('squirrel_list')
+    template_name = 'Tracker/squirrels_list.html'
 
 class SquirrelStats(ListView):
     model = Squirrels
