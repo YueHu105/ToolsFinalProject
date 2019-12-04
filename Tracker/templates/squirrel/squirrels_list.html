@@ -1,0 +1,22 @@
+<h1>Squirrels</h1>
+
+<table border="1">
+<thead>
+    <tr>
+    <th>UniqueSquirrelID</th>
+    <th>Edit</th>
+    <th>Delete</th>
+    </tr>
+</thead>
+<tbody>
+    {% for squirrel in object_list %}
+    <tr>
+    <td>{{ squirrel.Unique_Squirrel_ID }}</td>
+    <td><a href="{% url "squirrel_update" squirrel.Unique_Squirrel_ID  %}">update</a></td>
+    <td><a href="{% url "squirrel_delete" squirrel.Unique_Squirrel_ID  %}">delete</a></td>
+    </tr>
+    {% endfor %}
+</tbody>
+</table>
+
+<a href="{% url "squirrel_add" %}">New</a>
