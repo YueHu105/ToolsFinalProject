@@ -33,4 +33,4 @@ class SquirrelAdd(CreateView):
 
 class SquirrelStats(ListView):
     model = Squirrels
-    template_name = "squirrel/squirrels_stats.html"
+    template_name = "Tracker/squirrels_stats.html"
