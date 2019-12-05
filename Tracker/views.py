@@ -36,3 +36,13 @@ class SquirrelAdd(CreateView):
 class SquirrelStats(ListView):
     model = Squirrels
     template_name = "Tracker/squirrels_stats.html"
+
+def stats(request):
+    squirrel_list = Squirrels.objects.all()
+    a=len(squirrel_list)
+    b=squirrel_list.aggregate(min_latitude=Min('Latitude'),max_latitude=Max('Latitude'),average_latitude=Avg('latitude'))
+    c=c=sq_data.aggregate(min_longitude=Min('Longitude'),max_longitude=Max('Longitude'),average_longitude=Avg('longitude'))
+    d=List(squirrel_list.values_list('Shift').annotate(Count('Shift')))
+    e=list(squirrel_list.values_list('Age').annotate(Count('Age')))
+    f=list(squirrel_list.values_list('Primary_Fur_Color').annotate(Count('Primary_Fur_Color')))
+    return render(request, 'Tracker/squirrel_stats2.html", {"a":a,"b":b,"c":c,"d":d,"e":e,"f":f})
