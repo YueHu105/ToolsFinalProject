@@ -4,6 +4,7 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 from .models import Squirrels
 import json
+from django.db.models import Avg, Max, Min, Count
 # Create your views here.
 
 def leafletmap(request):
@@ -40,9 +41,8 @@ class SquirrelStats(ListView):
 def stats(request):
     squirrel_list = Squirrels.objects.all()
     a=len(squirrel_list)
-    b=squirrel_list.aggregate(min_latitude=Min('Latitude'),max_latitude=Max('Latitude'),average_latitude=Avg('latitude'))
-    c=c=sq_data.aggregate(min_longitude=Min('Longitude'),max_longitude=Max('Longitude'),average_longitude=Avg('longitude'))
-    d=List(squirrel_list.values_list('Shift').annotate(Count('Shift')))
+    b=squirrel_list.aggregate(min_latitude=Min('Latitude'),max_latitude=Max('Latitude'),average_latitude=Avg('Latitude'))
+    c=squirrel_list.aggregate(min_longitude=Min('Longitude'),max_longitude=Max('Longitude'),average_longitude=Avg('Longitude'))
+    d=list(squirrel_list.values_list('Shift').annotate(Count('Shift')))
     e=list(squirrel_list.values_list('Age').annotate(Count('Age')))
-    f=list(squirrel_list.values_list('Primary_Fur_Color').annotate(Count('Primary_Fur_Color')))
-    return render(request, 'Tracker/squirrel_stats2.html", {"a":a,"b":b,"c":c,"d":d,"e":e,"f":f})
+    return render(request, 'Tracker/squirrels_stats2.html', {"a":a,"b":b,"c":c,"d":d,"e":e})
