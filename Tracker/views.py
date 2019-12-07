@@ -9,7 +9,7 @@ from django.db.models import Avg, Max, Min, Count
 
 def leafletmap(request):
     squirrel_list = Squirrels.objects.all()[0:100]
-    sqList = [{"X": float(sq.Longitude), "Y": float(sq.Latitude), "ID": sq.Unique_Squirrel_ID} for sq in squirrel_list]
+    sqList = [{"Y": float(sq.Longitude), "X": float(sq.Latitude), "ID": sq.Unique_Squirrel_ID} for sq in squirrel_list]
     context = {'squirrel_list': json.dumps(sqList)}
     return render(request, 'Tracker/map.html', context)
 
