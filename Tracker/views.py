@@ -40,10 +40,9 @@ class SquirrelStats(ListView):
 
 def stats(request):
     squirrel_list = Squirrels.objects.all()
-    a=len(squirrel_list)
-    b=squirrel_list.aggregate(min_latitude=Min('Latitude'),max_latitude=Max('Latitude'),average_latitude=Avg('Latitude'))
-    c=squirrel_list.aggregate(min_longitude=Min('Longitude'),max_longitude=Max('Longitude'),average_longitude=Avg('Longitude'))
-    d=list(squirrel_list.values_list('Shift').annotate(Count('Shift')))
-    e=list(squirrel_list.values_list('Location').annotate(Count('Location')))
-    f=list(squirrel_list.values_list('Primary_Fur_Color').annotate(Count('Primary_Fur_Color')))
-    return render(request, 'Tracker/squirrels_stats2.html', {"a":a,"b":b,"c":c,"d":d,"e":e,"f":f})
+    a = len(squirrel_list)
+    b = squirrel_list.aggregate(average_longitude=Avg('Longitude'))
+    c = squirrel_list.aggregate(min_latitude=Min('Latitude'), max_latitude=Max('Latitude'))
+    d = list(squirrel_list.values_list('Location').annotate(Count('Location')))
+    e = list(squirrel_list.values_list('Shift').annotate(Count('Shift')))
+    return render(request, 'Tracker/squirrels_stats.html', {"a": a, "b": b, "c": c, "d": d, "e": e, })

@@ -1,24 +1,10 @@
-<h1>Squirrels</h1>
+<h1>Stats of sightings</h1>
 
-<table border="1">
-<thead>
-    <tr>
-    <th>UniqueSquirrelID</th>
-    <th>Latitude</th>
-    <th>Longitude</th>
-    <th>Date</th>
-    <th>Age</th>
-    </tr>
-</thead>
-<tbody>
-    {% for squirrel in object_list %}
-    <tr>
-    <td>{{ squirrel.Unique_Squirrel_ID }}</td>
-    <td>{{ squirrel.Latitude }}</td>
-    <td>{{ squirrel.Longitude }}</td>
-    <td>{{ squirrel.Date }}</td>
-    <td>{{ squirrel.Age }}</td>
-    </tr>
-    {% endfor %}
-</tbody>
-</table>
+<body>
+      <li>Total number of sightings: {{a}}</li><br>
+      <li>longitude：average is {{b.average_longitude}}</li><br>
+      <li>Latitiude：min-{{c.min_latitude}}</li>
+      <li>Latitiude：max-{{c.max_latitude}}</li><br>
+      <li>Location counts: {{d}}</li><br>
+      <li>Shift counts: {{e}}</li></ul>
+</body>
