@@ -10,7 +10,7 @@ The data is from 2018 Central Park Squirrel Census. It contains 3,023 sighting r
 
 How to use Tracker?
 -
-There are six views in the application. 
+There are five views in the application. 
 ### A view of a map which displays the location of the squirrel sightings<br>  
 Located at: /map<br>  
 
@@ -21,10 +21,7 @@ Located at: /sightings<br>
 Located at: /sightings/<unique-squirrel-id><br>  
 	
 ### A view to create a new sighting<br>  
-Located at: /sightings/add<br>  
-
-### A view to delete a sighting<br>  
-Located at: /sightings/<unique-squirrel-id><br>  
+Located at: /sightings/add<br>   
 
 ### A view of general stats about the sightings<br>  
 Located at: /sightings/stats<br>  
