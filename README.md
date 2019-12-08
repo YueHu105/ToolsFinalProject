@@ -41,3 +41,6 @@ Project Group 12, Section 2<br>
 UNIs: [ps3120, yh3218] <br>  
 Name: Pei Yin Jodie Shue, Yue Hu
 
+The server link
+-
+https://my-project-8-253814.appspot.com<br>
