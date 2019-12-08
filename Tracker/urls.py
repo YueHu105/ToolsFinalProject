@@ -19,6 +19,5 @@ urlpatterns = [
     path('', views.SquirrelList.as_view(), name='squirrel_list'),
     path('add/', views.SquirrelAdd.as_view(), name='squirrel_add'),
     path('<slug:pk>/update/', views.SquirrelUpdate.as_view(), name='squirrel_update'),
-    path('<slug:pk>/delete/', views.SquirrelDelete.as_view(), name='squirrel_delete'),
     path('stats/', views.stats, name='squirrel_stats'),
 ]

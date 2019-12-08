@@ -5,7 +5,6 @@
     <tr>
     <th>UniqueSquirrelID</th>
     <th>Edit</th>
-    <th>Delete</th>
     </tr>
 </thead>
 <tbody>
@@ -13,7 +12,6 @@
     <tr>
     <td>{{ squirrel.Unique_Squirrel_ID }}</td>
     <td><a href="{% url "squirrel_update" squirrel.Unique_Squirrel_ID  %}">update</a></td>
-    <td><a href="{% url "squirrel_delete" squirrel.Unique_Squirrel_ID  %}">delete</a></td>
     </tr>
     {% endfor %}
 </tbody>
