@@ -1,12 +1,11 @@
-# Todo 
-# Importation 
+
+
 import os 
 import csv 
 from django.core.management.base import BaseCommand 
 from Tracker.models import Squirrels
 import datetime as dt
 import pandas as pd
-import os
 
 
 class Command(BaseCommand):
