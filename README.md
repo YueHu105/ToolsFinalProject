@@ -1,6 +1,6 @@
 Tracker
 =
-What it Tracker?
+What is the Squirrel Tracker APP?
 -
 Tracker is a Web-based application to keep track of all the known squirrels in Central Park. It includes a map visualization, choices for adding, updating, deleting sighting records and a general stats about the sightings.
 
@@ -13,7 +13,6 @@ How to use Tracker?
 There are six views in the application. 
 ### A view of a map which displays the location of the squirrel sightings<br>  
 Located at: /map<br>  
-Method: GET
 
 ### A view of a list of all squirrel sightings<br>  
 Located at: /sightings<br>  
