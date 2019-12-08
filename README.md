@@ -16,19 +16,15 @@ Located at: /map<br>
 
 ### A view of a list of all squirrel sightings<br>  
 Located at: /sightings<br>  
-Method: GET
 
 ### A view to update a particular sighting<br>  
 Located at: /sightings/<unique-squirrel-id><br>  
-Method: POST
 	
 ### A view to create a new sighting<br>  
 Located at: /sightings/add<br>  
-Method: POST
 
 ### A view to delete a sighting<br>  
 Located at: /sightings/<unique-squirrel-id><br>  
-Method: DELETE
 
 ### A view of general stats about the sightings<br>  
 Located at: /sightings/stats<br>  
