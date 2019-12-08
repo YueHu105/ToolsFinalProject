@@ -28,7 +28,6 @@ Located at: /sightings/<unique-squirrel-id><br>
 
 ### A view of general stats about the sightings<br>  
 Located at: /sightings/stats<br>  
-Method: GET
 
 Group name and section
 -
